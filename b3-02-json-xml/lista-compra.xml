@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+  <supermercados>
+    <nombre>Carrefour</nombre>
+    <dirección>Calle 123, Nº 45, Ciudad A</dirección>
+    <geolocalización>41.40338, 2.17403</geolocalización>
+    <productos>
+      <nombre>Leche</nombre>
+      <unidades>1</unidades>
+      <unidad-medida>litro</unidad-medida>
+      <precio>1.89</precio>
+      <adquirido>false</adquirido>
+    </productos>
+    <productos>
+      <nombre>Pan</nombre>
+      <unidades>3</unidades>
+      <unidad-medida>gramos</unidad-medida>
+      <precio>1.25</precio>
+      <adquirido>true</adquirido>
+    </productos>
+    <productos>
+      <nombre>Arroz</nombre>
+      <unidades>1</unidades>
+      <unidad-medida>kilogramo</unidad-medida>
+      <precio>2.09</precio>
+      <adquirido>false</adquirido>
+    </productos>
+    <productos>
+      <nombre>Huevos</nombre>
+      <unidades>12</unidades>
+      <unidad-medida>unidades</unidad-medida>
+      <precio>2.5</precio>
+      <adquirido>true</adquirido>
+    </productos>
+    <ofertas>
+      <descripción>Descuento del 10% en productos de limpieza</descripción>
+      <periodo-vigencia>2023-04-10</periodo-vigencia>
+    </ofertas>
+    <ofertas>
+      <descripción>2x1 en galletas seleccionadas</descripción>
+      <periodo-vigencia>2023-04-1</periodo-vigencia>
+    </ofertas>
+    <ofertas>
+      <descripción>3x2 en refrescos</descripción>
+      <periodo-vigencia>2023-04-7</periodo-vigencia>
+    </ofertas>
+  </supermercados>
+  <supermercados>
+    <nombre>Lidl</nombre>
+    <dirección>Avenida 789, Nº 65, Ciudad B</dirección>
+    <geolocalización>40.712776, -74.005974</geolocalización>
+    <productos>
+      <nombre>Pasta</nombre>
+      <unidades>2</unidades>
+      <unidad-medida>gramos</unidad-medida>
+      <precio>1.23</precio>
+      <adquirido>false</adquirido>
+    </productos>
+    <productos>
+      <nombre>Tomates</nombre>
+      <unidades>1</unidades>
+      <unidad-medida>kilogramo</unidad-medida>
+      <precio>1.2</precio>
+      <adquirido>false</adquirido>
+    </productos>
+    <productos>
+      <nombre>Aceite de oliva</nombre>
+      <unidades>1</unidades>
+      <unidad-medida>litro</unidad-medida>
+      <precio>4.5</precio>
+      <adquirido>false</adquirido>
+    </productos>
+    <ofertas>
+      <descripción>20% de descuento en carnes</descripción>
+      <periodo-vigencia>2023-05-1</periodo-vigencia>
+    </ofertas>
+    <ofertas>
+      <descripción>Compra 2 pescados y lleva el tercero gratis</descripción>
+      <periodo-vigencia>2023-04-2</periodo-vigencia>
+    </ofertas>
+  </supermercados>
+  <supermercados>
+    <nombre>Día</nombre>
+    <dirección>Bulevar 456, Nº 32, Ciudad C</dirección>
+    <geolocalización>48.856613, 2.352222</geolocalización>
+    <productos>
+      <nombre>Yogurt</nombre>
+      <unidades>4</unidades>
+      <unidad-medida>unidades</unidad-medida>
+      <precio>2.45</precio>
+      <adquirido>true</adquirido>
+    </productos>
+    <productos>
+      <nombre>Café</nombre>
+      <unidades>1</unidades>
+      <unidad-medida>gramos</unidad-medida>
+      <precio>3.5</precio>
+      <adquirido>false</adquirido>
+    </productos>
+    <ofertas>
+      <descripción>25% de descuento en productos lácteos</descripción>
+      <periodo-vigencia>2023-04-12</periodo-vigencia>
+    </ofertas>
+  </supermercados>
+</root>

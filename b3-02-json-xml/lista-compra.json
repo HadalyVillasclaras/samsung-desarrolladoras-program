@@ -1,0 +1,118 @@
+{
+  "supermercados": [
+    {
+      "nombre": "Carrefour",
+      "dirección": "Calle 123, Nº 45, Ciudad A",
+      "geolocalización": "41.40338, 2.17403",
+      "productos": [
+        {
+          "nombre": "Leche",
+          "unidades": 1,
+          "unidad-medida": "litro",
+          "precio": 1.89,
+          "adquirido": false
+        },
+        {
+          "nombre": "Pan",
+          "unidades": 3,
+          "unidad-medida": "gramos",
+          "precio": 1.25,
+          "adquirido": true
+        },
+        {
+          "nombre": "Arroz",
+          "unidades": 1,
+          "unidad-medida": "kilogramo",
+          "precio": 2.09,
+          "adquirido": false
+        },
+        {
+          "nombre": "Huevos",
+          "unidades": 12,
+          "unidad-medida": "unidades",
+          "precio": 2.5,
+          "adquirido": true
+        }
+      ],
+      "ofertas": [
+        {
+          "descripción": "Descuento del 10% en productos de limpieza",
+          "periodo-vigencia": "2023-04-10"
+        },
+        {
+          "descripción": "2x1 en galletas seleccionadas",
+          "periodo-vigencia": "2023-04-1"
+        },
+        {
+          "descripción": "3x2 en refrescos",
+          "periodo-vigencia": "2023-04-7"
+        }
+      ]
+    },
+    {
+      "nombre": "Lidl",
+      "dirección": "Avenida 789, Nº 65, Ciudad B",
+      "geolocalización": "40.712776, -74.005974",
+      "productos": [
+        {
+          "nombre": "Pasta",
+          "unidades": 2,
+          "unidad-medida": "gramos",
+          "precio": 1.23,
+          "adquirido": false
+        },
+        {
+          "nombre": "Tomates",
+          "unidades": 1,
+          "unidad-medida": "kilogramo",
+          "precio": 1.2,
+          "adquirido": false
+        },
+        {
+          "nombre": "Aceite de oliva",
+          "unidades": 1,
+          "unidad-medida": "litro",
+          "precio": 4.5,
+          "adquirido": false
+        }
+      ],
+      "ofertas": [
+        {
+          "descripción": "20% de descuento en carnes",
+          "periodo-vigencia": "2023-05-1"
+        },
+        {
+          "descripción": "Compra 2 pescados y lleva el tercero gratis",
+          "periodo-vigencia": "2023-04-2"
+        }
+      ]
+    },
+    {
+      "nombre": "Día",
+      "dirección": "Bulevar 456, Nº 32, Ciudad C",
+      "geolocalización": "48.856613, 2.352222",
+      "productos": [
+        {
+          "nombre": "Yogurt",
+          "unidades": 4,
+          "unidad-medida": "unidades",
+          "precio": 2.45,
+          "adquirido": true
+        },
+        {
+          "nombre": "Café",
+          "unidades": 1,
+          "unidad-medida": "gramos",
+          "precio": 3.5,
+          "adquirido": false
+        }
+      ],
+      "ofertas": [
+        {
+          "descripción": "25% de descuento en productos lácteos",
+          "periodo-vigencia": "2023-04-12"
+        }
+      ]
+    }
+  ]
+}
