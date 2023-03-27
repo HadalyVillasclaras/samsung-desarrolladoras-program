@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+
+}
+
+body {
+    background-color: #272f3b;
+    color: #8c9cbb;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+section {
+    background-color: #3a4057;
+    border: 1px solid #8c9cbb;
+    border-radius: 10px;
+    width: 350px;
+    padding: 2rem;
+}
+
+/*Form*/
+form {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+li{
+    position: relative;
+}
+
+fieldset {
+    margin-bottom: 2rem;
+}
+
+
+label{
+    display: block;
+    margin: 2rem 0 0.4rem 0;
+}
+
+input {
+    width: 100%;
+    padding: 1rem 2rem 1rem 1rem;
+    border-radius: 2px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+input:focus{
+    background-color:#c0bff1;
+    outline: 3px solid #2E1BA6;
+}
+
+
+input[type=submit]{
+    background-color: #6d67f4;
+    color: white;
+    border:2px solid #272f3b;
+    text-transform: uppercase;
+    padding: 1rem 0;
+
+}
+
+input[type=submit]:hover {
+    background-color: #29257a;
+    color: #6d67f4;
+    border:2px solid #6d67f4;
+    cursor: pointer;
+}
+
+input[type=reset]{
+    background-color: transparent;
+    color: #8c9cbb;
+    border:2px solid #8c9cbb;
+    text-transform: uppercase;
+    padding: 1rem 0;
+
+}
+
+input[type=reset]:hover {
+    background-color: #29257a;
+    border:2px solid #6d67f4;
+    color: #6d67f4;
+    cursor: pointer;
+}
+
+.input-container {
+    position: relative;
+    /* margin-bottom: 2rem; */
+}
+
+/* Error / success control*/
+.errMsg {
+    margin-top: .5rem;
+    color: rgb(218, 72, 72);
+    font-size: 90%;
+}
+
+.errInput {
+    border: 2px solid rgb(218, 72, 72);
+}
+
+.successInput {
+    border: 3px solid rgb(164, 228, 127);
+}
+
+.errIcon{
+    background-image: url(imgs/error-icon.svg);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    display: block;
+    top: 0;
+    right: 0;
+}
+.successIcon {
+    background-image: url(imgs/success-icon.svg);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    display: block;
+    top: 0;
+    right: 0;
+}
+
+.aria-description {
+    position: absolute;
+    bottom: -100%;
+    left: 25%;
+    width: 50%;
+    border-radius: 3px;
+    display: none;
+    font-size: 0.8rem;
+    color: #29257a;
+    background-color: #8c9cbb;
+    padding: 0.5rem;
+}
+
+input[type=submit]:hover + #descriptionSend{
+    display: block;
+}
+
+#pass:hover + #descriptionEmail {
+    display: block;
+
+}
+
