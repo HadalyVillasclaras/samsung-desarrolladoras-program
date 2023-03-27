@@ -1,4 +1,4 @@
-<h3>Samsung Desarrolladoras program</h3>
+<h2>Samsung Desarrolladoras program</h2>
 <p>Samsung DesArrolladoras es un programa formativo de la comunidad <b>Samsung Dev Spain</b> en colaboración con la <b>Universidad Camilo José Cela</b> que tiene como objetivo impulsar la incorporación de <b>mujeres en el sector STEM</b>.</p>
 <p>En 2022 fui una de las seleccionadas para realizar este programa durante el curso 2022/23.</p>
 <br>
