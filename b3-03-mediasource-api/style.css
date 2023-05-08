@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  gap: 1rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  background-color: #638489;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 0.5rem;
+}

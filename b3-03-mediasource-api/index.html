@@ -4,18 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>MediaSource Api</title>
 </head>
 <body>
-  <video id="video" controls src="./assets/video.mp4" width="620">
-    El reproductor que estás usando no permite reproducir este contenido,
-    puedes descargarlo <a href="./assets/video.mp4">aquí</a>
-  </video>
-  <div>
-    <button onclick="document.getElementById('video').play();">Reproducir</button>
-    <button onclick="document.getElementById('video').pause();">Pausa</button>
-    <button onclick="document.getElementById('video').volume += 0.1;">Subir Volumen</button>
-    <button onclick="document.getElementById('video').volume -= 0.1;">Bajar Volumen</button>
+  <input type="file" id="file-selector" accept="video/*" />
+  <section>
+    <video  width="620">
+      El navegador que estás usando no permite reproducir este vídeo,
+      puedes descargarlo <a href="./assets/video.mp4">aquí</a>
+    </video>
+    <p id="loading-message" style="display: none;">Cargando vídeo, por favor espera...</p>
+  </section>
+  <ul id="video-controls" class="controls">
+    <li><button id="play">Reproducir</button></li>
+    <li><button id="pause">Pausa</button></li>
+    <li><button id="vol-up">Subir Volumen</button></li>
+    <li><button id="vol-down">Bajar Volumen</button></li>
+  </ul>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
 
