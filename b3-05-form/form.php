@@ -21,8 +21,6 @@
 
     <input type="submit" value="Subscríbete">
 
-
-
     <?php
 
       if($_POST) {
@@ -30,8 +28,6 @@
         $apellido = $_POST['apellido'];
         $email = $_POST['email'];
 
-
-        // Conexión BD
         $server = "localhost";
         $username = "root";
         $pass = "";
