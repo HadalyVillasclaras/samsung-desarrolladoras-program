@@ -45,7 +45,23 @@
     <span id="form-feedback"></span>
     <input type="submit" value="Enviar">
   </form>
-  <script src="./js/main.js"></script>
+  <button id="consulta-btn" style="display: none;">Consulta</button>
+
+
+  <table id="user-table" style="display: none;">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Primer Apellido</th>
+      <th>Segundo Apellido</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody id="user-table-body">
+  </tbody>
+</table>
+
+  <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
