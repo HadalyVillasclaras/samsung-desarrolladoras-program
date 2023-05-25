@@ -49,17 +49,17 @@
 
 
   <table id="user-table" style="display: none;">
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Primer Apellido</th>
-      <th>Segundo Apellido</th>
-      <th>Email</th>
-    </tr>
-  </thead>
-  <tbody id="user-table-body">
-  </tbody>
-</table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Primer Apellido</th>
+        <th>Segundo Apellido</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody id="user-table-body">
+    </tbody>
+  </table>
 
   <script type="module" src="./js/main.js"></script>
 </body>

@@ -71,5 +71,4 @@ export function submitForm(event) {
 function showQueryButton() {
   const consultaButton = document.getElementById('consulta-btn');
   consultaButton.style.display = "inline-block";
-
 }
