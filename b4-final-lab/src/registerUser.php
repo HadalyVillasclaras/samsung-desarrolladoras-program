@@ -25,23 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 
   try {
-<<<<<<< HEAD:b4-final-lab/src/registerUser.php
-      $connection = new Connection();
-      $stmt = $connection->Connect()->prepare("INSERT INTO User (name, first_surname, second_surname, email, password) 
-      VALUES (:name, :first_surname, :second_surname, :email, :password)");
-  
-      $stmt->bindParam(':name', $name);
-      $stmt->bindParam(':first_surname', $first_surname);
-      $stmt->bindParam(':second_surname', $second_surname);
-      $stmt->bindParam(':email', $email);
-      
-      $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-      $stmt->bindParam(':password', $hashed_password);
-      
-      $stmt->execute();
-  
-      echo "Registro completado con éxito";
-=======
     $connection = new Connection();
     $stmt = $connection->Connect()->prepare("INSERT INTO User (name, first_surname, second_surname, email, password) VALUES (:name, :first_surname, :second_surname, :email, :password)");
 
@@ -56,7 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute();
 
     echo "Registro exitoso!";
->>>>>>> c85b33d8e69bb177dd39bbbeb7b2c1af99206b75:b4-final-lab/src/register.php
   
   } catch(PDOException $e) {
     echo $e;
@@ -69,8 +51,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
   }
 }
-<<<<<<< HEAD:b4-final-lab/src/registerUser.php
-}
-=======
->>>>>>> c85b33d8e69bb177dd39bbbeb7b2c1af99206b75:b4-final-lab/src/register.php
 $connection = null; 
