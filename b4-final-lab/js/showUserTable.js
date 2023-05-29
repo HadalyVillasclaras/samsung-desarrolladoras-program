@@ -2,18 +2,17 @@ const userTable = document.getElementById('user-table');
 const userTableBody = document.getElementById('user-table-body');
 
 export function getUsers() {
-  console.log('fdfd');
   fetch('./src/getUsers.php')
     .then(response => response.json())
     .then(users => {
       console.log(users);
-      populateUserTable(users);
+      showTable(users);
       userTable.style.display = 'block';
     })
     .catch(error => console.error('Error:', error));
 }
 
-function populateUserTable(users) {
+function showTable(users) {
   userTableBody.innerHTML = ''; 
 
   for (let user of users) {

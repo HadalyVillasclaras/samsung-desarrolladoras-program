@@ -23,11 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       echo "La contraseña debe tener entre 4 y 8 caracteres.";
       return;
   }
-  
 
   try {
       $connection = new Connection();
-      $stmt = $connection->Connect()->prepare("INSERT INTO User (name, first_surname, second_surname, email, password) VALUES (:name, :first_surname, :second_surname, :email, :password)");
+      $stmt = $connection->Connect()->prepare("INSERT INTO User (name, first_surname, second_surname, email, password) 
+      VALUES (:name, :first_surname, :second_surname, :email, :password)");
   
       $stmt->bindParam(':name', $name);
       $stmt->bindParam(':first_surname', $first_surname);
@@ -39,9 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       
       $stmt->execute();
   
-      echo "Registro exitoso!";
+      echo "Registro completado con éxito";
   
   } catch(PDOException $e) {
+    echo $e;
     if (strpos($e->getMessage(), '1062') !== false) {
         http_response_code(409);
         echo "El correo electrónico ya está registrado.";
@@ -50,9 +51,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Error: " . $e->getMessage();
     }
 }
-  
-
 }
-
-
 $connection = null; 

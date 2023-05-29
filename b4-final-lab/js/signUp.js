@@ -4,46 +4,44 @@ const inputFields = document.querySelectorAll('.input-field');
 export function handleSubmit(event) {
   event.preventDefault();
 
-  if (validateFields(inputFields)) {
-    submitForm(event);
+  if (validateInputFields(inputFields)) {
+    signUp(event);
   }
 }
 
-export function validateFields(inputFields) {
-
-  let isValid = true;
+function validateInputFields(inputFields) {
+  let isValid = false;
 
   for (let i = 0; i < inputFields.length; i++) {
     let input = inputFields[i];
-    let errorMessage = input.nextElementSibling;
+    let inputErrorMsg = input.nextElementSibling;
 
     if (!input.value.trim()) {
-      isValid = false;
-      errorMessage.textContent = 'Este campo es requerido.';
-      errorMessage.style.display = 'block';
+      inputErrorMsg.textContent = 'Este campo es requerido.';
+      inputErrorMsg.style.display = 'block';
     } else if (input.name === 'password' && (input.value.length < 4 || input.value.length > 8)) {
-      isValid = false;
-      errorMessage.textContent = 'La contraseña debe tener entre 4 y 8 caracteres.';
-      errorMessage.style.display = 'block';
+      inputErrorMsg.textContent = 'La contraseña debe tener entre 4 y 8 caracteres.';
+      inputErrorMsg.style.display = 'block';
     } else if (input.name === 'email' && !input.value.match(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/)) {
-      isValid = false;
-      errorMessage.textContent = 'Introduzca un correo electrónico válido.';
-      errorMessage.style.display = 'block';
+      inputErrorMsg.textContent = 'Introduzca un correo electrónico válido.';
+      inputErrorMsg.style.display = 'block';
     } else {
-      errorMessage.textContent = '';
-      errorMessage.style.display = 'none';
+      inputErrorMsg.textContent = '';
+      inputErrorMsg.style.display = 'none';
+      isValid = true;
     }
   }
 
   return isValid;
 }
 
-export function submitForm(event) {
+function signUp(event) {
   event.preventDefault();
+  let formErrorMsg = '';
 
   let formData = new FormData(event.target);
 
-  fetch('./src/register.php', {
+  fetch('./src/registerUser.php', {
     method: 'POST',
     body: formData
   })
@@ -56,7 +54,7 @@ export function submitForm(event) {
   .then(data => {
     formFeedback.style.color = 'green';
     formFeedback.textContent = data;
-    showQueryButton();
+    showTableButton();
   })
   .catch((error) => {
     if (error.message == '409') {
@@ -68,8 +66,7 @@ export function submitForm(event) {
 }
 
 
-function showQueryButton() {
+function showTableButton() {
   const consultaButton = document.getElementById('consulta-btn');
   consultaButton.style.display = "inline-block";
-
 }
