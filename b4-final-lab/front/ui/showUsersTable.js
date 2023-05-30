@@ -1,18 +1,9 @@
-const userTable = document.getElementById('user-table');
 const userTableBody = document.getElementById('user-table-body');
+const userTable = document.getElementById('user-table');
 
-export function getUsers() {
-  fetch('/samsung-desarrolladoras-program/b4-final-lab/src/getUsers.php')
-    .then(response => response.json())
-    .then(users => {
-      console.log(users);
-      showTable(users);
-      userTable.style.display = 'block';
-    })
-    .catch(error => console.error('Error:', error));
-}
+export function showUsersTable(users) {
+  userTable.style.display = 'block';
 
-function showTable(users) {
   userTableBody.innerHTML = ''; 
 
   for (let user of users) {
