@@ -41,7 +41,7 @@ function signUp(event) {
 
   let formData = new FormData(event.target);
 
-  fetch('./src/registerUser.php', {
+  fetch('../src/registerUser.php', {
     method: 'POST',
     body: formData
   })

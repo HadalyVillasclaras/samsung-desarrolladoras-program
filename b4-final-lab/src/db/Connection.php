@@ -1,6 +1,6 @@
 <?php
 
-require_once("../config/dbConfig.php");
+require_once("/samsung-desarrolladoras-program/b4-final-lab/src/db/config/dbConfig.php");
 
 class Connection
 {

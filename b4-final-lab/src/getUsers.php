@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Connection.php';
+require_once '/samsung-desarrolladoras-program/b4-final-lab/src/db/Connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     try {
@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $stmt->execute();
         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
+        return $users;
         echo json_encode($users);
         
     } catch(PDOException $e) {

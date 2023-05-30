@@ -2,7 +2,7 @@ const userTable = document.getElementById('user-table');
 const userTableBody = document.getElementById('user-table-body');
 
 export function getUsers() {
-  fetch('./src/getUsers.php')
+  fetch('/samsung-desarrolladoras-program/b4-final-lab/src/getUsers.php')
     .then(response => response.json())
     .then(users => {
       console.log(users);
