@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,62 +7,61 @@
   <link rel="stylesheet" type="text/css" href="./front/ui/css/style.css">
   <title>final lab</title>
 </head>
-
 <body>
-  <section>
-    <h2 id="form-title">Formulario de Registro</h2>
-    <form method="POST" action="registerUser.php" aria-labelledby="form-title" autocomplete="off">
+  <h1>Samsung Lab</h1>
+  <main>
+    <section>
+      <h2 id="form-title">Formulario de Registro</h2>
+      <form method="POST" action="registerUser.php" aria-labelledby="form-title" autocomplete="off">
+        <fieldset>
+          <p>
+            <label for="nombre">Nombre<span aria-hidden="true">*</span></label>
+            <input type="text" class="input-field" name="nombre" aria-required="true">
+            <span class="error-message"></span>
+          </p>
+          <p>
+            <label for="primer-apellido">Primer Apellido<span aria-hidden="true">*</span></label>
+            <input type="text" class="input-field" name="primer-apellido" aria-required="true">
+            <span class="error-message"></span>
+          </p>
+          <p>
+            <label for="segundo-apellido">Segundo Apellido<span aria-hidden="true">*</span></label>
+            <input type="text" class="input-field" name="segundo-apellido" aria-required="true">
+            <span class="error-message"></span>
+          </p>
+          <p>
+            <label for="email">Email<span aria-hidden="true">*</span></label>
+            <input type="email" class="input-field" name="email" autocomplete="email" aria-required="true">
+            <span class="error-message"></span>
+          </p>
+          <p>
+            <label for="password">Password<span aria-hidden="true">*</span></label>
+            <input type="password" class="input-field" name="password" autocomplete="new-password" aria-required="true">
+            <span class="error-message"></span>
+          </p>
+        </fieldset>
+        <span id="form-feedback"></span>
+        <input type="submit" value="Enviar">
+        <button id="consulta-btn" style="display: none;">Consulta</button>
+      </form>
+    </section>
   
-      <label for="nombre">Nombre<span aria-hidden="true">*</span></label>
-      <div>
-        <input type="text" class="input-field" name="nombre" aria-required="true">
-        <span class="error-message"></span>
-      </div>
-  
-      <label for="primer-apellido">Primer Apellido<span aria-hidden="true">*</span></label>
-      <div>
-        <input type="text" class="input-field" name="primer-apellido" aria-required="true">
-        <span class="error-message"></span>
-      </div>
-  
-      <label for="segundo-apellido">Segundo Apellido<span aria-hidden="true">*</span></label>
-      <div>
-        <input type="text" class="input-field" name="segundo-apellido" aria-required="true">
-        <span class="error-message"></span>
-      </div>
-  
-      <label for="email">Email<span aria-hidden="true">*</span></label>
-      <div>
-        <input type="email" class="input-field" name="email" autocomplete="email" aria-required="true">
-        <span class="error-message"></span>
-      </div>
-  
-      <label for="password">Password<span aria-hidden="true">*</span></label>
-      <div>
-        <input type="password" class="input-field" name="password" autocomplete="new-password" aria-required="true">
-        <span class="error-message"></span>
-      </div>
-      <span id="form-feedback"></span>
-      <input type="submit" value="Enviar">
-    </form>
-  </section>
-  <button id="consulta-btn" style="display: none;">Consulta</button>
-
-  <section>
-    <table id="user-table" style="display: none;">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Primer Apellido</th>
-          <th>Segundo Apellido</th>
-          <th>Email</th>
-        </tr>
-      </thead>
-      <tbody id="user-table-body">
-      </tbody>
-    </table>
-  </section>
+    <section>
+      <h2 id="table-title">Listado de usuarios</h2>
+      <table id="user-table" style="display: table;" aria-labelledby="table-title">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Primer Apellido</th>
+            <th>Segundo Apellido</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="user-table-body">
+        </tbody>
+      </table>
+    </section>
+  </main>
   <script type="module" src="./front/main.js"></script>
 </body>
-
 </html>

@@ -6,7 +6,7 @@ export function signUp(event) {
 
   let formData = new FormData(event.target);
 
-  fetch('/samsung-final-lab/src/registerUser.php', {
+  fetch('/samsung-desarrolladoras-program/b4-final-lab/src/registerUser.php', {
     method: 'POST',
     body: formData
   })
