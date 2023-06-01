@@ -1,8 +1,8 @@
 const userTableBody = document.getElementById('user-table-body');
 const userTable = document.getElementById('user-table');
-
+const tableSection = document.getElementById('table-section');
 export function showUsersTable(users) {
-  userTable.style.display = 'table';
+  tableSection.style.display = 'flex';
 
   userTableBody.innerHTML = ''; 
 

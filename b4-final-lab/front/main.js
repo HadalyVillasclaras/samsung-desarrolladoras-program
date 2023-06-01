@@ -14,7 +14,6 @@ if (form) {
   
   async function handleClick() {
     const users = await getUsers();
-    console.log(users);
     showUsersTable(users);
   }
 

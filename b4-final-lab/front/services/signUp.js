@@ -2,7 +2,6 @@ const formFeedback = document.getElementById('form-feedback');
 
 export function signUp(event) {
   event.preventDefault();
-  let formErrorMsg = '';
 
   let formData = new FormData(event.target);
 
@@ -17,12 +16,18 @@ export function signUp(event) {
     return response.text();
   })
   .then(data => {
-    formFeedback.style.color = 'green';
-    formFeedback.textContent = data;
-    showTableButton();
+    if (data) {
+      formFeedback.style.display = "block";
+      formFeedback.textContent = data;
+      formFeedback.classList.replace('error-message', 'form-feedback'); 
+
+      showTableButton();
+    }
   })
   .catch((error) => {
     if (error.message == '409') {
+      formFeedback.style.display = "block";
+      formFeedback.classList.replace('form-feedback', 'error-message'); 
       formFeedback.textContent = 'El correo electrónico ya está registrado.';
     } else {
       console.error('Error:', error);

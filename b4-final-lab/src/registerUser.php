@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo $e;
     if (strpos($e->getMessage(), '1062') !== false) {
         http_response_code(409);
-        echo "El correo electrónico ya está registrado.";
+        echo "El correo electrónico que has introducido ya está registrado.";
     } else {
         http_response_code(500);
         echo "Error: " . $e->getMessage();

@@ -40,15 +40,15 @@
             <span class="error-message"></span>
           </p>
         </fieldset>
-        <span id="form-feedback"></span>
+        <span id="form-feedback" class="form-feedback"></span>
         <input type="submit" value="Enviar">
         <button id="consulta-btn" style="display: none;">Consulta</button>
       </form>
     </section>
   
-    <section>
+    <section id="table-section">
       <h2 id="table-title">Listado de usuarios</h2>
-      <table id="user-table" style="display: table;" aria-labelledby="table-title">
+      <table id="user-table"  aria-labelledby="table-title">
         <thead>
           <tr>
             <th>Nombre</th>
